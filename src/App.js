@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import Note from './Note/Note';
+import NoteForm from './NoteForm/NoteForm';
 import './App.css';
 
 class App extends Component  {
@@ -15,6 +16,11 @@ class App extends Component  {
         {id:2 , noteContent: "Note 2 here" },
       ],
     }
+  }
+
+  addNote(note){
+    //push the note onto the notes array 
+    this.state.notes.push(note);
   }
 
   render(){ 
@@ -34,6 +40,7 @@ class App extends Component  {
          }
        </div>
        <div className="notesFooter">
+         <NoteForm/>
 
        </div>
        </div>
